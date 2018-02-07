@@ -1,0 +1,38 @@
+.s-findUs {
+    &__wrapper {
+        height: 400px;
+    }
+}
+
+.MyMarker {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: 7px solid #8b623c;
+    box-sizing: border-box;
+    position: relative;
+    animation: bouncing-marker .7s ease-out infinite alternate;
+    &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 23px 16px 0 16px;
+        border-color: #8b623c transparent transparent transparent;
+    }
+}
+@keyframes bouncing-marker{
+    0%{
+        transform:translate3d(0,10px,0);
+    }
+    50%{
+        transform:translate3d(0,0,0);
+    }
+    100%{
+        transform: translate3d(0,-10px,0);
+    }
+}

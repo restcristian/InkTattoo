@@ -1,0 +1,43 @@
+.NewsLetterForm{
+    width:100%;
+    padding:0 24px;
+    &__header{
+        text-transform: uppercase;
+        margin-bottom: 40px;
+    }
+    &__title{
+        font-weight: bold;
+        font-size: 14px;
+    }
+    &__desc{
+        font-size: 12px;
+    }
+
+    input{
+       &[type="text"]{
+           border:1px solid #000;
+           box-sizing: border-box;
+           padding:10px 21px;
+           text-transform: uppercase;
+           width:100%;
+           font-size: 12px;
+           font-weight: bold;
+       }
+       
+    }
+    &__submit{
+        width:100%;
+        display: block;
+        background-color: #9a977a;
+        text-transform: uppercase;
+        color:#fff;
+        font-size: 12px;
+        margin-top:22px;
+        padding:13px 24px;
+        cursor: pointer;
+        &:hover{
+            background-color:#000;
+        }
+    }
+
+}

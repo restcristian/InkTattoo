@@ -1,0 +1,6 @@
+.GalleryTiles__inner {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  flex-wrap: wrap; }

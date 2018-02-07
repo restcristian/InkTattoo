@@ -1,0 +1,40 @@
+.s-gallery{
+    .col-item{
+        width:20%;
+        &:first-child{
+            width:39.93333333333333%;
+        }
+    }
+
+    @media(max-width:1023px){
+        .col-item{
+            width:25%;
+            &:first-child{
+                width:100%;
+                .Tile__inner{
+                    padding-bottom: 35.25% !important;
+                }
+             
+            }
+        }
+    }
+
+    @media(max-width:850px){
+        .col-item{
+            width:33.33333%;
+        }
+    }
+    @media(max-width:756px){
+        .col-item{
+            width:50%;
+        }
+    }
+
+    @media(max-width:400px){
+        .col-item{
+            width:100%;
+        }
+    }
+
+
+}

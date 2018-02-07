@@ -1,0 +1,32 @@
+.ContactForm{
+    text-align: left;
+    *{
+        box-sizing: border-box;
+        max-width: 100%;
+    }
+    input{
+        margin-bottom:24px;
+    }
+    textarea{
+        resize: none;
+        height: 217px;
+    }
+    input, textarea{
+        border:2px solid #000;
+        width:100%;
+        text-transform: uppercase;
+        padding:12px;
+    }
+    &__submit-btn{
+        color:#fff;
+        text-transform: uppercase;
+        padding:12px;
+        background-color:#9a977a;
+        margin-top:30px;
+        width:100%;
+        cursor: pointer;
+        &:hover{
+            background-color:#000;
+        }
+    }
+}

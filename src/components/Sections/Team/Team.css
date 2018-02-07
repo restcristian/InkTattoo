@@ -1,0 +1,14 @@
+.s-team .col-item {
+  width: 33.3333333%; }
+
+@media (max-width: 1023px) {
+  .s-team .col-item {
+    width: 50%; }
+  .s-team .team-header-col {
+    width: 100%; }
+    .s-team .team-header-col .Tile__inner {
+      padding-bottom: 35.25% !important; }
+  .s-team .newsletter-form {
+    width: 100%; }
+    .s-team .newsletter-form .Tile__inner {
+      padding-bottom: 56.25% !important; } }

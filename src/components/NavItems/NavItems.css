@@ -1,0 +1,57 @@
+.NavItems {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: .2s ease-in-out; }
+  .NavItems .main-logo {
+    position: absolute;
+    top: 35px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 260px;
+    transition: .2s ease-in-out; }
+    .NavItems .main-logo img {
+      max-width: 100%;
+      height: auto; }
+  .NavItems__wrapper {
+    max-width: 770px;
+    margin: 0 auto;
+    position: relative; }
+  .NavItems--list {
+    display: flex;
+    width: 100%; }
+    .NavItems--list li {
+      padding: 0 15px;
+      position: relative; }
+      .NavItems--list li:nth-child(3) {
+        margin-right: auto; }
+      .NavItems--list li a {
+        text-transform: uppercase;
+        font-family: inherit;
+        font-size: 12px;
+        color: #000;
+        text-decoration: none;
+        position: relative;
+        line-height: 136px;
+        transition: .2s ease-in-out; }
+        .NavItems--list li a:before {
+          content: '';
+          position: absolute;
+          bottom: -5px;
+          width: 0;
+          height: 2px;
+          background-color: #000;
+          transition: width .2s ease-out; }
+        .NavItems--list li a:hover:before {
+          width: 100%; }
+  .NavItems.scrolled {
+    background-color: #fff;
+    position: fixed;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2); }
+    .NavItems.scrolled .main-logo {
+      width: 220px;
+      top: 16px; }
+    .NavItems.scrolled .NavItems--list li a {
+      line-height: 90px; }

@@ -1,0 +1,22 @@
+.s-team{
+    .col-item{
+        width:33.3333333%;
+    }
+    @media(max-width:1023px){
+        .col-item{
+            width:50%;
+        }
+        .team-header-col{
+            width:100%;
+            .Tile__inner{
+                padding-bottom: 35.25% !important;
+            }
+        }
+        .newsletter-form{
+            width:100%;
+            .Tile__inner{
+                padding-bottom: 56.25% !important;
+            }
+        }
+    }
+}

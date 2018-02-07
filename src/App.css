@@ -1,0 +1,52 @@
+html,
+body {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+body {
+    background-color: #f2efe5;
+}
+
+main{
+    display: block;
+    width:100%;
+}
+#root{
+  max-width:1128px;
+  margin:0 auto;
+}
+
+.reset-pad {
+    padding: 0;
+}
+
+.reset-mg {
+    margin: 0;
+}
+
+.reset-list {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+.accessible-hide {
+    position: absolute !important;
+    left: -999999px !important;
+    top: -999999px !important;
+    display: block !important;
+}
+
+.appereance {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+    margin: 0;
+    padding: 0;
+    border: none;
+    -webkit-border-radius: 0px;
+    border-radius: 0px;
+    background-color: transparent;
+}

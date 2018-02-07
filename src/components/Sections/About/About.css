@@ -1,0 +1,18 @@
+.About__inner {
+  max-width: 541px;
+  text-align: center;
+  font-size: 16px;
+  padding: 0 24px; }
+
+.About .paragraph-1 {
+  margin-top: 20px; }
+
+.About .paragraph-2 {
+  margin-top: 12px; }
+
+.s-about .col-item {
+  width: 50%; }
+
+@media (max-width: 1023px) {
+  .s-about .Tile__inner {
+    padding-bottom: 100% !important; } }

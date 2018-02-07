@@ -1,0 +1,24 @@
+.s-gallery .col-item {
+  width: 20%; }
+  .s-gallery .col-item:first-child {
+    width: 39.93333333333333%; }
+
+@media (max-width: 1023px) {
+  .s-gallery .col-item {
+    width: 25%; }
+    .s-gallery .col-item:first-child {
+      width: 100%; }
+      .s-gallery .col-item:first-child .Tile__inner {
+        padding-bottom: 35.25% !important; } }
+
+@media (max-width: 850px) {
+  .s-gallery .col-item {
+    width: 33.33333%; } }
+
+@media (max-width: 756px) {
+  .s-gallery .col-item {
+    width: 50%; } }
+
+@media (max-width: 400px) {
+  .s-gallery .col-item {
+    width: 100%; } }
