@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link, DirectLink, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
+import { Link, Events, animateScroll as scroll, scrollSpy } from 'react-scroll'
 import './NavItems.css';
 import Logo from '../../assets/imgs/logo.png';
 

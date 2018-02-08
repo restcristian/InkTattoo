@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import GalleryTiles from '../../../components/Tiles/GalleryTiles/GalleryTiles';
 import GalleryTile from '../../../components/Tiles/GalleryTiles/GalleryTile/GalleryTile';
 import GalleryImg1 from '../../../assets/imgs/galleryimg1.png';
 import GalleryImg2 from '../../../assets/imgs/galleryimg2.png';
