@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import Layout from './hoc/Layout/Layout';
+import Layout from './hoc/Layout/Laying';
 import About from './components/Sections/About/About';
 import Gallery from './components/Sections/Gallery/Gallery';
 import Team from './components/Sections/Team/Team';

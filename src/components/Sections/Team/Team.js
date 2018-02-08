@@ -7,7 +7,7 @@ import TeamImg1 from '../../../assets/imgs/team_1.png';
 import TeamImg2 from '../../../assets/imgs/team_2.png';
 import TeamTile from '../../Tiles/TeamTile/TeamTile';
 import NewsLetterForm from '../../NewsLetterForm/NewsLetterForm';
-import Aux from '../../../hoc/Aux';
+import Aux from '../../../hoc/Auxiliary';
 import './Team.css';
 
 const Team = (props) => {
