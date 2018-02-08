@@ -33,7 +33,6 @@ class NavItems extends Component {
         } else {
             this.setState({ isMobile: false });
         }
-        console.log('resizing');
     }
     openMobileHandler = (e) => {
         this.setState({ isMobileOpen: true });

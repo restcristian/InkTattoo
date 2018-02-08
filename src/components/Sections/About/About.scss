@@ -12,6 +12,11 @@
     .paragraph-2{
         margin-top:12px;
     }
+
+    .Tile__inner{
+        padding-bottom: 56.25%;
+    }
+
 }
 .s-about{
     .col-item{
@@ -22,7 +27,36 @@
             // display: block;
         }
         .Tile__inner{
-            padding-bottom: 100% !important;
+            padding-bottom: 100%;
+        }
+    }
+    @media(max-width:767px){
+        .col-item{
+            width:100%;
+        }
+    }
+    @media(max-width:500px){
+        .Tile__inner{
+            padding-bottom: 0;
+            height: auto;
+        }
+        .Tile__content{
+            position: static;
+            height: auto;
+        }
+        .about-header-col{
+            .Tile__inner{
+                padding:100px 0;
+            }
+        }
+        .about-info-col{
+            .Tile__inner{
+                padding:24px 0;
+            }
+        }
+
+        .headertxt-aboutus{
+            padding:17px 24px;
         }
     }
 }

@@ -37,14 +37,12 @@ const Team = (props) => {
         return (
             <Aux key={idx}>
                 <Tile
-                    className="col-item"
-                    aspectRatio="100%"
+                    className="col-item team-member-pic "
                     bgImage={item.teamImg}
                 >
                 </Tile>
                 <TeamTile
-                    className="col-item"
-                    aspectRatio="100%"
+                    className="col-item team-tile-info"
                     memberInfo={item}
                     bgColor='#ccc8b6'
                 />
@@ -56,15 +54,13 @@ const Team = (props) => {
             <TilesRow>
                 <Tile
                     className="col-item team-header-col"
-                    aspectRatio="100%"
                     bgImage={TeamBg}>
                     <HeaderTxt text="Team" />
                 </Tile>
                 {teamMembers}
                 <Tile
                     className="col-item newsletter-form"
-                    bgColor="#fff"
-                    aspectRatio="100%">
+                    bgColor="#fff">
                     <NewsLetterForm />
                 </Tile>
             </TilesRow>

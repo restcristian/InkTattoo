@@ -70,10 +70,9 @@ class Gallery extends Component {
             <section className="s-gallery">
                 <TilesRow>
                     <Tile
-                        className="col-item"
-                        bgColor="#afac9c"
-                        aspectRatio="50.1%">
-                        <HeaderTxt text="Gallery" />
+                        className="col-item gallery-header-col"
+                        bgColor="#afac9c">
+                        <HeaderTxt className = "headertxt-gallery"text="Gallery" />
                     </Tile>
                     {galleryTiles}
                 </TilesRow>

@@ -1,4 +1,5 @@
 import React from 'react';
+import './Tile.css';
 
 const Tile = (props) => {
     let classes = ["Tile"];
@@ -8,10 +9,10 @@ const Tile = (props) => {
     return (
         <div className={classes.join(' ')}>
             <div className="Tile__inner" style={{
-                width: '100%',
-                position: 'relative',
-                height: 0,
-                paddingBottom: props.aspectRatio,
+                // width: '100%',
+                // position: 'relative',
+                // height: 0,
+                // paddingBottom: props.aspectRatio,
                 // minHeight: props.height,
                 backgroundImage: 'url(' + props.bgImage + ')',
                 backgroundSize: 'cover',
@@ -20,17 +21,7 @@ const Tile = (props) => {
                 backgroundColor:props.bgColor
             }}>
 
-                <div style={{
-                    position: 'absolute',
-                    top: 0,
-                    left: 0,
-                    width:'100%',
-                    height:'100%',
-                    display:'flex',
-                    alignItems:'center',
-                    justifyContent:'center',
-                    overflow:'auto'
-                }}>
+                <div className = "Tile__content">
                     {props.children}
                 </div>
             </div>

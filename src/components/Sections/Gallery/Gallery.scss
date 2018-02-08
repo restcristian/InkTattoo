@@ -3,8 +3,12 @@
         width:20%;
         &:first-child{
             width:39.93333333333333%;
+            .Tile__inner{
+                padding-bottom: 50.1%;
+            }
         }
     }
+    
 
     @media(max-width:1023px){
         .col-item{
@@ -12,7 +16,7 @@
             &:first-child{
                 width:100%;
                 .Tile__inner{
-                    padding-bottom: 35.25% !important;
+                    padding-bottom: 35.25%;
                 }
              
             }
@@ -30,9 +34,31 @@
         }
     }
 
+    @media(max-width:500px){
+        .col-item{
+            &:first-child{
+                .Tile__inner{
+                    padding-bottom: 0;
+                    height: auto;
+                    padding:48px 0;
+                }
+                .Tile__content{
+                    position: static;
+                    height: auto;
+                }
+            }
+        }
+    }
+
     @media(max-width:400px){
         .col-item{
             width:100%;
+        }
+    }
+
+    @media(max-width:360px){
+        .headertxt-gallery{
+            padding:17px 28px;
         }
     }
 

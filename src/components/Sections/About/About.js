@@ -11,16 +11,13 @@ const About = (props) => {
         <section className="s-about">
             <TilesRow>
                 <Tile
-                    className="About col-item"
-                    aspectRatio = "56.25%"
+                    className="About col-item about-header-col"
                     bgImage={aboutBG}
                 >
-                    <HeaderTxt text="About Us" />
+                    <HeaderTxt className = "headertxt-aboutus" text="About Us" />
                 </Tile>
                 <Tile
-                    className="About col-item"
-                    aspectRatio = "56.25%"
-                    
+                    className="About col-item about-info-col"
                 >
                     <div className="About__inner">
                         <img src={tattoo} alt="Tattoo" />

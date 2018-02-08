@@ -6,6 +6,7 @@ import Gallery from './components/Sections/Gallery/Gallery';
 import Team from './components/Sections/Team/Team';
 import ContactUs from './components/Sections/ContactUs/ContactUs';
 import FindUs from './components/Sections/FindUs/FindUs';
+import FooterArea from './components/Sections/FooterArea/FooterArea';
 
 class App extends Component {
  
@@ -17,6 +18,7 @@ class App extends Component {
         <Gallery />
         <ContactUs />
         <FindUs />
+        <FooterArea />
       </Layout>
     );
   }

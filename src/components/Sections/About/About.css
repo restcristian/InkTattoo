@@ -10,9 +10,30 @@
 .About .paragraph-2 {
   margin-top: 12px; }
 
+.About .Tile__inner {
+  padding-bottom: 56.25%; }
+
 .s-about .col-item {
   width: 50%; }
 
 @media (max-width: 1023px) {
   .s-about .Tile__inner {
-    padding-bottom: 100% !important; } }
+    padding-bottom: 100%; } }
+
+@media (max-width: 767px) {
+  .s-about .col-item {
+    width: 100%; } }
+
+@media (max-width: 500px) {
+  .s-about .Tile__inner {
+    padding-bottom: 0;
+    height: auto; }
+  .s-about .Tile__content {
+    position: static;
+    height: auto; }
+  .s-about .about-header-col .Tile__inner {
+    padding: 100px 0; }
+  .s-about .about-info-col .Tile__inner {
+    padding: 24px 0; }
+  .s-about .headertxt-aboutus {
+    padding: 17px 24px; } }
