@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
 import './NavItems.css';
 import Logo from '../../assets/imgs/logo.png';
+
 
 class NavItems extends Component {
     state = {
@@ -39,6 +41,13 @@ class NavItems extends Component {
     }
     closeMobileHandler = (e) => {
         this.setState({ isMobileOpen: false });
+    }
+    mobileLinkClickHandler = (e) => {
+        e.preventDefault();
+        // Select all links with hashes
+        
+        console.log(e.currentTarget.getAttribute('href'));
+
     }
     render() {
         const ListItems = [
@@ -85,7 +94,7 @@ class NavItems extends Component {
                 <div className="NavItems--isMobile__wrapper">
                     <ul className="NavItems--list--mobile reset-list">
                         {ListItems.map((item, idx) =>
-                            <li key={item.caption}><a href={item.url}><span>{item.caption}</span></a></li>
+                            <li key={item.caption}><a onClick={this.mobileLinkClickHandler} href={item.url}><span>{item.caption}</span></a></li>
                         )}
                     </ul>
                     <button onClick={this.closeMobileHandler} className="NavItems--isMobile__closebtn appereance"><span className="accessible-hide">Close Menu</span><span>X</span></button>

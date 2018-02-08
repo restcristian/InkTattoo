@@ -13,7 +13,7 @@ const FindUs = (props) => {
         zoom: 11
     };
     return (
-        <section className="s-findUS">
+        <section className="s-findUS" id = "s-findUs">
             <div className="s-findUs__wrapper">
                 <GoogleMapReact
                     defaultCenter={defaultProps.center}

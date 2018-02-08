@@ -50,7 +50,7 @@ const Team = (props) => {
         );
     });
     return (
-        <section className="s-team">
+        <section className="s-team" id = "s-team">
             <TilesRow>
                 <Tile
                     className="col-item team-header-col"

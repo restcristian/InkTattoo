@@ -8,7 +8,7 @@ import './About.css';
 
 const About = (props) => {
     return (
-        <section className="s-about">
+        <section className="s-about" id = "s-about">
             <TilesRow>
                 <Tile
                     className="About col-item about-header-col"

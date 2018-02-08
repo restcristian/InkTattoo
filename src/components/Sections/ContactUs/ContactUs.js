@@ -5,7 +5,7 @@ import './ContactUs.css';
 
 const ContactUs = (props) => {
     return (
-        <section className="s-contactUs">
+        <section className="s-contactUs" id = "s-contact-us">
             <div className="s-contactUs__wrapper">
                 <div className="col-item contact-info">
                     <HeaderTxt text="Contact Us" className="header-txt" />

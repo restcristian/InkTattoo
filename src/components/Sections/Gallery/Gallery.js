@@ -67,7 +67,7 @@ class Gallery extends Component {
             return <GalleryTile onClick={() => this.setCurrentGalleryItem(item)} key={idx} className="col-item" bgImg={item.bgImg} caption={item.caption} />
         });
         return (
-            <section className="s-gallery">
+            <section className="s-gallery" id = "s-gallery">
                 <TilesRow>
                     <Tile
                         className="col-item gallery-header-col"
