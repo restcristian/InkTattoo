@@ -35,7 +35,8 @@
         text-decoration: none;
         position: relative;
         line-height: 136px;
-        transition: .2s ease-in-out; }
+        transition: .2s ease-in-out;
+        cursor: pointer; }
         .NavItems--list li a:before {
           content: '';
           position: absolute;
@@ -60,30 +61,30 @@
   .NavItems--isMobile .NavItems--list--mobile {
     width: 100%; }
     .NavItems--isMobile .NavItems--list--mobile li {
-      padding: 0; }
+      padding: 0;
+      text-align: center; }
     .NavItems--isMobile .NavItems--list--mobile li a {
       background-color: #fff;
-      display: block;
       line-height: 70px;
       color: black;
       text-decoration: none;
       text-align: center;
       font-size: 42px;
-      text-transform: uppercase; }
-      .NavItems--isMobile .NavItems--list--mobile li a span {
-        position: relative; }
-        .NavItems--isMobile .NavItems--list--mobile li a span:before {
-          content: '';
-          display: block;
-          position: absolute;
-          top: 50%;
-          left: 0;
-          width: 0;
-          height: 3px;
-          background-color: #000;
-          transform: translateY(-50%);
-          transition: width .2s ease-out; }
-      .NavItems--isMobile .NavItems--list--mobile li a:hover span:before {
+      text-transform: uppercase;
+      position: relative;
+      cursor: pointer; }
+      .NavItems--isMobile .NavItems--list--mobile li a:before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 0;
+        height: 3px;
+        background-color: #000;
+        transform: translateY(-50%);
+        transition: width .2s ease-out; }
+      .NavItems--isMobile .NavItems--list--mobile li a:hover:before {
         width: 100%; }
   .NavItems--isMobile .NavItems--isMobile__wrapper {
     display: flex;

@@ -13,6 +13,7 @@ import Tile from '../../Tiles/Tile/Tile';
 import TilesRow from '../../Tiles/TilesRow/TilesRow';
 import HeaderTxt from '../../HeaderTxt/HeaderTxt';
 import Modal from '../../UI/Modal/Modal';
+import { Element } from 'react-scroll';
 import './Gallery.css';
 
 class Gallery extends Component {
@@ -67,18 +68,20 @@ class Gallery extends Component {
             return <GalleryTile onClick={() => this.setCurrentGalleryItem(item)} key={idx} className="col-item" bgImg={item.bgImg} caption={item.caption} />
         });
         return (
-            <section className="s-gallery" id = "s-gallery">
-                <TilesRow>
-                    <Tile
-                        className="col-item gallery-header-col"
-                        bgColor="#afac9c">
-                        <HeaderTxt className = "headertxt-gallery"text="Gallery" />
-                    </Tile>
-                    {galleryTiles}
-                </TilesRow>
-                <Modal isOpen={this.state.isModalOpen} closeModal={() => this.closeModal()}>
-                    <img src={this.state.selectedGalleryItem.bgImg} alt={this.state.selectedGalleryItem.caption} />
-                </Modal>
+            <section className="s-gallery" id="s-gallery">
+                <Element name="s-gallery">
+                    <TilesRow>
+                        <Tile
+                            className="col-item gallery-header-col"
+                            bgColor="#afac9c">
+                            <HeaderTxt className="headertxt-gallery" text="Gallery" />
+                        </Tile>
+                        {galleryTiles}
+                    </TilesRow>
+                    <Modal isOpen={this.state.isModalOpen} closeModal={() => this.closeModal()}>
+                        <img src={this.state.selectedGalleryItem.bgImg} alt={this.state.selectedGalleryItem.caption} />
+                    </Modal>
+                </Element>
             </section>
 
         );

@@ -1,19 +1,18 @@
 .NavItems {
     position: absolute;
-    top:0;
-    left:0;
-    width:100%;
+    top: 0;
+    left: 0;
+    width: 100%;
     z-index: 1000;
-    transition:.2s ease-in-out;
-
-    .main-logo{
+    transition: .2s ease-in-out;
+    .main-logo {
         position: absolute;
-        top:35px;
-        left:50%;
-        transform:translateX(-50%);
-        width:260px;
-        transition:.2s ease-in-out;
-        img{
+        top: 35px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 260px;
+        transition: .2s ease-in-out;
+        img {
             max-width: 100%;
             height: auto;
         }
@@ -40,123 +39,117 @@
                 text-decoration: none;
                 position: relative;
                 line-height: 136px;
-                transition:.2s ease-in-out;
-                &:before{
-                    content:'';
+                transition: .2s ease-in-out;
+                cursor: pointer;
+                &:before {
+                    content: '';
                     position: absolute;
-                    bottom:-5px;
-                    width:0;
+                    bottom: -5px;
+                    width: 0;
                     height: 2px;
                     background-color: #000;
-                    transition:width .2s ease-out;
+                    transition: width .2s ease-out;
                 }
-
-                &:hover{
-                    &:before{
-                        width:100%;
+                &:hover {
+                    &:before {
+                        width: 100%;
                     }
                 }
             }
         }
     }
-    &.scrolled, &--isMobile{
+    &.scrolled,
+    &--isMobile {
         background-color: #fff;
         position: fixed;
-        box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
-
-        .main-logo{
-            width:178px;
-            top:16px;
+        box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+        .main-logo {
+            width: 178px;
+            top: 16px;
         }
-        .NavItems--list li a{
+        .NavItems--list li a {
             line-height: 90px;
         }
     }
-
-    &--isMobile{
-        .NavItems__wrapper{
+    &--isMobile {
+        .NavItems__wrapper {
             height: 90px;
         }
-        .NavItems--list--mobile{
-           width:100%;
-            li{
-                padding:0;
+        .NavItems--list--mobile {
+            width: 100%;
+            li {
+                padding: 0;
+                text-align: center;
             }
-            li a{
-                background-color: #fff;
-                display: block;
+            li a {
+                background-color: #fff; // display: block;
                 line-height: 70px;
                 color: black;
                 text-decoration: none;
                 text-align: center;
                 font-size: 42px;
                 text-transform: uppercase;
-                span{
-                    position: relative;
-                    &:before{
-                        content:'';
-                        display: block;
-                        position: absolute;
-                        top:50%;
-                        left:0;
-                        width:0;
-                        height: 3px;
-                        background-color: #000;
-                        transform:translateY(-50%);
-                        transition: width .2s ease-out;
-                    }
+                position: relative;
+                cursor: pointer;
+                &:before {
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    top: 50%;
+                    left: 0;
+                    width: 0;
+                    height: 3px;
+                    background-color: #000;
+                    transform: translateY(-50%);
+                    transition: width .2s ease-out;
                 }
-                &:hover{
-                    span{
-                        &:before{
-                            width:100%;
-                        }
+                &:hover {
+                    &:before {
+                        width: 100%;
                     }
                 }
             }
-            
         }
-        .NavItems--isMobile__wrapper{
+        .NavItems--isMobile__wrapper {
             display: flex;
             align-items: center;
             position: fixed;
-            top:0;
-            right:0;
-            width:0;
+            top: 0;
+            right: 0;
+            width: 0;
             height: 0;
             z-index: 99999;
             transform-origin: 100% 0;
             background-color: #fff;
             overflow: auto;
-            transition:all .2s ease-in-out;
+            transition: all .2s ease-in-out;
         }
-        .NavItems--isMobile__closebtn{
+        .NavItems--isMobile__closebtn {
             position: absolute;
-            top:24px;
-            right:24px;
+            top: 24px;
+            right: 24px;
             font-size: 48px;
             cursor: pointer;
-            &:hover{
-                color:#afac9c;
+            &:hover {
+                color: #afac9c;
             }
         }
-        .NavItems--isMobile__openbtn{
+        .NavItems--isMobile__openbtn {
             position: absolute;
-            top:50%;
-            right:24px;
+            top: 50%;
+            right: 24px;
             transform: translateY(-50%);
             font-size: 24px;
             cursor: pointer;
-            &:hover{
-                color:#afac9c;
+            &:hover {
+                color: #afac9c;
             }
         }
-        &--open{
-            .NavItems--isMobile__wrapper{
-                width:100%;
+        &--open {
+            .NavItems--isMobile__wrapper {
+                width: 100%;
                 height: 100vh;
             }
         }
     }
-    
 }
