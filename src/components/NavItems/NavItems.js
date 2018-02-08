@@ -35,8 +35,11 @@ class NavItems extends Component {
         }
         console.log('resizing');
     }
-    closeMobileHandler = (e) =>{
-        this.setState({isMobileOpen:false});
+    openMobileHandler = (e) => {
+        this.setState({ isMobileOpen: true });
+    }
+    closeMobileHandler = (e) => {
+        this.setState({ isMobileOpen: false });
     }
     render() {
         const ListItems = [
@@ -73,21 +76,23 @@ class NavItems extends Component {
                 )}
             </ul>
         );
+        let openMobileBtn = null;
         if (this.state.pastScrolled) {
             classes.push('scrolled');
         }
         if (this.state.isMobile) {
             classes.push('NavItems--isMobile');
             navList = (
-                <div className = "NavItems--isMobile__wrapper">
+                <div className="NavItems--isMobile__wrapper">
                     <ul className="NavItems--list--mobile reset-list">
                         {ListItems.map((item, idx) =>
                             <li key={item.caption}><a href={item.url}><span>{item.caption}</span></a></li>
                         )}
                     </ul>
-                    <button onClick = {this.closeMobileHandler} className="NavItems--isMobile__closebtn appereance"><span className = "accessible-hide">Close Menu</span><span>X</span></button>
+                    <button onClick={this.closeMobileHandler} className="NavItems--isMobile__closebtn appereance"><span className="accessible-hide">Close Menu</span><span>X</span></button>
                 </div>
             );
+            openMobileBtn = <button onClick={this.openMobileHandler} className="NavItems--isMobile__openbtn appereance" type="button"><span className="accessible-hide">Open Menu</span><span className="fa fa-bars"></span></button>
         }
         if (this.state.isMobile && this.state.isMobileOpen) {
             classes.push('NavItems--isMobile--open');
@@ -99,6 +104,7 @@ class NavItems extends Component {
                     <a href="/index.html" className="main-logo">
                         <img src={Logo} alt="Ink Tatto Logo" />
                     </a>
+                    {openMobileBtn}
                 </div>
             </nav>
         );

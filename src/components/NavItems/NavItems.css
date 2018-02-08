@@ -51,7 +51,7 @@
     position: fixed;
     box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2); }
     .NavItems.scrolled .main-logo, .NavItems--isMobile .main-logo {
-      width: 220px;
+      width: 178px;
       top: 16px; }
     .NavItems.scrolled .NavItems--list li a, .NavItems--isMobile .NavItems--list li a {
       line-height: 90px; }
@@ -105,7 +105,16 @@
     font-size: 48px;
     cursor: pointer; }
     .NavItems--isMobile .NavItems--isMobile__closebtn:hover {
-      color: #e7e5d0; }
+      color: #afac9c; }
+  .NavItems--isMobile .NavItems--isMobile__openbtn {
+    position: absolute;
+    top: 50%;
+    right: 24px;
+    transform: translateY(-50%);
+    font-size: 24px;
+    cursor: pointer; }
+    .NavItems--isMobile .NavItems--isMobile__openbtn:hover {
+      color: #afac9c; }
   .NavItems--isMobile--open .NavItems--isMobile__wrapper {
     width: 100%;
     height: 100vh; }

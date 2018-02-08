@@ -65,7 +65,7 @@
         box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
 
         .main-logo{
-            width:220px;
+            width:178px;
             top:16px;
         }
         .NavItems--list li a{
@@ -137,7 +137,18 @@
             font-size: 48px;
             cursor: pointer;
             &:hover{
-                color:#e7e5d0;
+                color:#afac9c;
+            }
+        }
+        .NavItems--isMobile__openbtn{
+            position: absolute;
+            top:50%;
+            right:24px;
+            transform: translateY(-50%);
+            font-size: 24px;
+            cursor: pointer;
+            &:hover{
+                color:#afac9c;
             }
         }
         &--open{
