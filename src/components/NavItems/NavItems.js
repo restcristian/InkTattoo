@@ -123,7 +123,7 @@ class NavItems extends Component {
                 <div className="NavItems--isMobile__wrapper">
                     <ul className="NavItems--list--mobile reset-list">
                         {ListItems.map((item, idx) =>
-                            <li key={item.caption}><Link onSetActive = {this.handleSetActive} activeClass = "active" to = {item.url} spy = {true} smooth = {true}>{item.caption}</Link></li>
+                            <li key={item.caption}><Link onSetActive = {this.handleSetActive} smooth = {false} activeClass = "active" to = {item.url} spy = {true}>{item.caption}</Link></li>
                         )}
                     </ul>
                     <button onClick={this.closeMobileHandler} className="NavItems--isMobile__closebtn appereance"><span className="accessible-hide">Close Menu</span><span>X</span></button>
