@@ -12,16 +12,7 @@ class NavItems extends Component {
     componentDidMount() {
         this.resizeHandler();
         window.addEventListener('scroll', this.scrollHandler);
-        window.addEventListener('resize', this.resizeHandler);
-
-        // Events.scrollEvent.register('begin', function (to, element) {
-        //     console.log("begin", arguments);
-        // });
-
-        // Events.scrollEvent.register('end', function (to, element) {
-        //     console.log("end", arguments);
-        // });
-       
+        window.addEventListener('resize', this.resizeHandler);      
 
     }
 
@@ -96,7 +87,6 @@ class NavItems extends Component {
             <ul className="NavItems--list reset-list">
                 {ListItems.map((item, idx) =>
                     <li key={item.caption}><a href={item.url} onClick = {this.linkClickHandler}>{item.caption}</a></li>
-                    // <li key={item.caption}><Link activeClass = "active" to = {item.url} spy = {true} smooth = {true}>{item.caption}</Link></li>
                 )}
             </ul>
         );
@@ -111,7 +101,6 @@ class NavItems extends Component {
                     <ul className="NavItems--list--mobile reset-list">
                         {ListItems.map((item, idx) =>
                             <li key={item.caption}><a onClick = {this.linkClickHandler} href={item.url}>{item.caption}</a></li>
-                            // <li key={item.caption}><Link onSetActive = {this.handleSetActive} smooth = {false} activeClass = "active" to = {item.url} spy = {true}>{item.caption}</Link></li>
                         )}
                     </ul>
                     <button onClick={this.closeMobileHandler} className="NavItems--isMobile__closebtn appereance"><span className="accessible-hide">Close Menu</span><span>X</span></button>
