@@ -1,13 +1,11 @@
 import React from 'react';
 import HeaderTxt from '../../HeaderTxt/HeaderTxt';
 import ContactForm from '../../ContactForm/ContactForm';
-import { Element } from 'react-scroll';
 import './ContactUs.css';
 
 const ContactUs = (props) => {
     return (
-        <section className="s-contactUs" id="s-contact-us">
-            <Element name="s-contactUs">
+        <section className="s-contactUs" id="s-contactUs">
                 <div className="s-contactUs__wrapper">
                     <div className="col-item contact-info">
                         <HeaderTxt text="Contact Us" className="header-txt" />
@@ -55,7 +53,6 @@ const ContactUs = (props) => {
                         <ContactForm />
                     </div>
                 </div>
-            </Element>
         </section>
     );
 };

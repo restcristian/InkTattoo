@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
-import { Link, Events, animateScroll as scroll, scrollSpy } from 'react-scroll'
 import './NavItems.css';
 import Logo from '../../assets/imgs/logo.png';
-
-
+import $ from 'jquery';
 
 class NavItems extends Component {
     state = {
@@ -23,31 +21,20 @@ class NavItems extends Component {
         // Events.scrollEvent.register('end', function (to, element) {
         //     console.log("end", arguments);
         // });
+       
 
-        scrollSpy.update();
-
-    }
-    componentWillMount() {
-        Events.scrollEvent.remove('begin');
-        Events.scrollEvent.remove('end');
     }
 
-    scrollToTop = () =>{
-        scroll.scrollToTop();
-    }
-    scrollToBottom = () => {
-        scroll.scrollToBottom();
-    }
-    scrollTo = () => {
-        scroll.scrollTo(100);
-    }
-    scrollMore = () =>{
-        scroll.scrollMore(100);
-    }
-    handleSetActive = (to) =>{
+
+    linkClickHandler = (e) => {
+        e.preventDefault();
+        let sectionID = e.target.getAttribute('href');
         if(this.state.isMobile && this.state.isMobileOpen){
             this.closeMobileHandler();
         }
+        $('html, body').animate({
+            scrollTop:$(sectionID).offset().top
+        },500);
     }
     shouldComponentUpdate(nextProps, nextState) {
         return nextState.pastScrolled !== this.state.pastScrolled ||
@@ -76,40 +63,40 @@ class NavItems extends Component {
     closeMobileHandler = (e) => {
         this.setState({ isMobileOpen: false });
     }
-   
+
     render() {
         const ListItems = [
             {
                 caption: 'Home',
-                url: 's-home'
+                url: '#s-home'
             },
             {
                 caption: 'About',
-                url: 's-about'
+                url: '#s-about'
             },
             {
                 caption: 'Gallery',
-                url: 's-gallery'
+                url: '#s-gallery'
             },
             {
                 caption: 'FAQ',
-                url: 's-gallery'
+                url: '#s-gallery'
             },
             {
                 caption: 'Find Us',
-                url: 's-findUs'
+                url: '#s-findUs'
             },
             {
                 caption: 'Contact',
-                url: 's-contactUs'
+                url: '#s-contactUs'
             },
         ];
         let classes = ['NavItems'];
         let navList = (
             <ul className="NavItems--list reset-list">
                 {ListItems.map((item, idx) =>
-                    // <li key={item.caption}><a href={item.url}>{item.caption}</a></li>
-                    <li key={item.caption}><Link activeClass = "active" to = {item.url} spy = {true} smooth = {true}>{item.caption}</Link></li>
+                    <li key={item.caption}><a href={item.url} onClick = {this.linkClickHandler}>{item.caption}</a></li>
+                    // <li key={item.caption}><Link activeClass = "active" to = {item.url} spy = {true} smooth = {true}>{item.caption}</Link></li>
                 )}
             </ul>
         );
@@ -123,7 +110,8 @@ class NavItems extends Component {
                 <div className="NavItems--isMobile__wrapper">
                     <ul className="NavItems--list--mobile reset-list">
                         {ListItems.map((item, idx) =>
-                            <li key={item.caption}><Link onSetActive = {this.handleSetActive} smooth = {false} activeClass = "active" to = {item.url} spy = {true}>{item.caption}</Link></li>
+                            <li key={item.caption}><a onClick = {this.linkClickHandler} href={item.url}>{item.caption}</a></li>
+                            // <li key={item.caption}><Link onSetActive = {this.handleSetActive} smooth = {false} activeClass = "active" to = {item.url} spy = {true}>{item.caption}</Link></li>
                         )}
                     </ul>
                     <button onClick={this.closeMobileHandler} className="NavItems--isMobile__closebtn appereance"><span className="accessible-hide">Close Menu</span><span>X</span></button>

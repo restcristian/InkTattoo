@@ -1,6 +1,5 @@
 import React from 'react';
 import GoogleMapReact from 'google-map-react';
-import { Element } from 'react-scroll';
 import './FindUs.css';
 
 const MyMarker = (props) => {
@@ -16,7 +15,6 @@ const FindUs = (props) => {
     return (
         <section className="s-findUS" id="s-findUs">
             <h2 className="accessible-hide">Find Us</h2>
-            <Element name="s-findUs">
                 <div className="s-findUs__wrapper">
                     <GoogleMapReact
                         defaultCenter={defaultProps.center}
@@ -26,8 +24,6 @@ const FindUs = (props) => {
                             lng={defaultProps.center.lng} />
                     </GoogleMapReact>
                 </div>
-            </Element>
-
         </section>
     );
     

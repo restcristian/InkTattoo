@@ -4,14 +4,11 @@ import Tile from '../../Tiles/Tile/Tile';
 import aboutBG from '../../../assets/imgs/about_bg.png';
 import HeaderTxt from '../../HeaderTxt/HeaderTxt';
 import tattoo from '../../../assets/imgs/tattoo_design.png';
-import { Element } from 'react-scroll';
 import './About.css';
 
 const About = (props) => {
     return (
-
         <section className="s-about" id="s-about">
-            <Element name="s-about">
                 <TilesRow>
                     <Tile
                         className="About col-item about-header-col"
@@ -35,7 +32,6 @@ Quisque ac malesuada lectus. Proin gravida feugiat commodo. Phasellus fermentum 
 
                     </Tile>
                 </TilesRow>
-            </Element>
         </section>
 
 

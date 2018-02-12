@@ -8,7 +8,6 @@ import TeamImg2 from '../../../assets/imgs/team_2.png';
 import TeamTile from '../../Tiles/TeamTile/TeamTile';
 import NewsLetterForm from '../../NewsLetterForm/NewsLetterForm';
 import Aux from '../../../hoc/Auxiliary';
-import { Element } from 'react-scroll';
 import './Team.css';
 
 const Team = (props) => {
@@ -52,7 +51,6 @@ const Team = (props) => {
     });
     return (
         <section className="s-team" id="s-team">
-            <Element name = "s-team">
                 <TilesRow>
                     <Tile
                         className="col-item team-header-col"
@@ -66,7 +64,6 @@ const Team = (props) => {
                         <NewsLetterForm />
                     </Tile>
                 </TilesRow>
-            </Element >
         </section >
     );
 };
