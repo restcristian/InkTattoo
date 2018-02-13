@@ -11,9 +11,10 @@ class NavItems extends Component {
     }
     componentDidMount() {
         this.resizeHandler();
-        window.addEventListener('scroll', this.scrollHandler);
-        window.addEventListener('resize', this.resizeHandler);      
-
+        // window.addEventListener('scroll', this.scrollHandler);
+        // window.addEventListener('resize', this.resizeHandler);   
+        $(window).resize(this.resizeHandler);   
+        $(window).scroll(this.scrollHandler);
     }
 
 
