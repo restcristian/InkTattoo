@@ -21,7 +21,8 @@ class Gallery extends Component {
         selectedGalleryItem: {}
     }
     setCurrentGalleryItem(item) {
-        this.setState({ isModalOpen: true, selectedGalleryItem: item });
+        let newItem = {...item};
+        this.setState({ isModalOpen: true, selectedGalleryItem: newItem });
     }
     closeModal() {
         this.setState({ isModalOpen: false });
