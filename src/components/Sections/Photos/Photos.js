@@ -11,48 +11,51 @@ class Photos extends Component {
         let settings = {
             slidesToShow: 4,
             slidesToScroll: 1,
-            arrow:false,
-            autoplay:true,
-            autoplaySpeed:5000,
-            pauseOnHover:false,
-            responsive:[
+            arrow: false,
+            autoplay: true,
+            autoplaySpeed: 5000,
+            pauseOnHover: false,
+            responsive: [
                 {
-                    breakpoint:1023,
-                    settings:{
-                        slidesToShow:3,
+                    breakpoint: 1023,
+                    settings: {
+                        slidesToShow: 3,
                     }
                 },
                 {
-                    breakpoint:767,
-                    settings:{
-                        slidesToShow:2
+                    breakpoint: 767,
+                    settings: {
+                        slidesToShow: 2
                     }
                 },
                 {
-                    breakpoint:539,
-                    settings:{
-                        slidesToShow:1
+                    breakpoint: 539,
+                    settings: {
+                        slidesToShow: 1
                     }
                 }
             ]
-            
+
         };
 
         let slides = [];
-        for(let count = 0; count <= 4; count++){
+        for (let count = 0; count <= 4; count++) {
             slides.push(
-                <div key = {count}>
-                    <img src={Photo1} alt= {"Photo " + count}/>
+                <div key={count}>
+                    <img src={Photo1} alt={"Photo " + count} />
                 </div>
             );
         }
 
         return (
-            <div className="Photos">
-                <Slider {...settings}>
-                    {slides}
-                </Slider>
-            </div>
+            <section id="s-photos">
+                <h2 className = "accessible-hide">Photo Slider</h2>
+                <div className="Photos">
+                    <Slider {...settings}>
+                        {slides}
+                    </Slider>
+                </div>
+            </section>
 
         );
 

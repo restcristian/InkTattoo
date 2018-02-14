@@ -67,11 +67,11 @@ class NavItems extends Component {
                 url: '#s-about'
             },
             {
-                caption: 'Gallery',
-                url: '#s-gallery'
+                caption: 'Photos',
+                url: '#s-photos'
             },
             {
-                caption: 'FAQ',
+                caption: 'Gallery',
                 url: '#s-gallery'
             },
             {
